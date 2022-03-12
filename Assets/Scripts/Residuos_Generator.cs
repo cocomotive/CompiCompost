@@ -11,7 +11,10 @@ public class Residuos_Generator : MonoBehaviour
     public float repeatIn;
     public GameObject Item_prefab1;
     public GameObject Item_prefab2;
-    //public GameObject Item_prefab3;
+    public GameObject Item_prefab3;
+    public GameObject Item_prefab4;
+    public GameObject Item_prefab5;
+    public GameObject Item_prefab6;
     private int nro_item;
     private int posX;
    
@@ -30,27 +33,44 @@ public class Residuos_Generator : MonoBehaviour
 
     public void SpawnItem()
     {    
-        nro_item = Random.Range(1,3);
+        nro_item = Random.Range(1,7);
         if (nro_item == 1)
         {
-            transform.position = new Vector3 (-1050, 350, 0);    
+        transform.position = new Vector3 (-1050, 350, 0);    
         GameObject Item = Instantiate(Item_prefab1, transform.position, transform.rotation) as GameObject;
         Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
         }
-        else
-        //if (nro_item == 2)
+        else if (nro_item == 2)
         {
-            transform.position = new Vector3 (-1050, 350, 0);    
+        transform.position = new Vector3 (-1050, 350, 0);    
         GameObject Item = Instantiate(Item_prefab2, transform.position, transform.rotation) as GameObject;
         Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
         }
-        // else
-        // {
-        //     transform.position = new Vector3 (-650, 150, 0);    
-        // GameObject Item = Instantiate(Item_prefab3, transform.position, transform.rotation) as GameObject;
-        // Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
+        else if (nro_item == 3)
+        {
+        transform.position = new Vector3 (-1050, 350, 0);    
+        GameObject Item = Instantiate(Item_prefab3, transform.position, transform.rotation) as GameObject;
+        Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
+        }
+        else if (nro_item == 4)
+        {
+        transform.position = new Vector3 (-1050, 350, 0);    
+        GameObject Item = Instantiate(Item_prefab3, transform.position, transform.rotation) as GameObject;
+        Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
+        }
+        else if (nro_item == 5)
+        {
+        transform.position = new Vector3 (-1050, 350, 0);    
+        GameObject Item = Instantiate(Item_prefab3, transform.position, transform.rotation) as GameObject;
+        Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
+        }
+        else
+        {
+        transform.position = new Vector3 (-1050, 350, 0);    
+        GameObject Item = Instantiate(Item_prefab4, transform.position, transform.rotation) as GameObject;
+        Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
 
-        // }
+        }
         
 
     }
