@@ -31,6 +31,8 @@ public class HighscoreTable : MonoBehaviour
         new HighscoreEntry{score = 64561, name = "DEH"},
         };*/
 
+
+
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
@@ -55,6 +57,7 @@ public class HighscoreTable : MonoBehaviour
         //    CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
         //}
 
+
         for (int i = 0; i < 10; i++)
         {
             CreateHighscoreEntryTransform(highscores.highscoreEntryList[i], entryContainer, highscoreEntryTransformList);
@@ -66,9 +69,11 @@ public class HighscoreTable : MonoBehaviour
         PlayerPrefs.Save();
         Debug.Log(PlayerPrefs.GetString("highscoreTable"));
         */
-             
+          
 
     }
+
+
 
     private void CreateHighscoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList)
     {
@@ -114,7 +119,7 @@ public class HighscoreTable : MonoBehaviour
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
        
         //crea una nueva entrada de puntaje alto
-        highscores.highscoreEntryList.Add(highscoreEntry);
+        //highscores.highscoreEntryList.Add(highscoreEntry);
        
         //guarda nuevos puntajes actualizados
         string json = JsonUtility.ToJson(highscores);

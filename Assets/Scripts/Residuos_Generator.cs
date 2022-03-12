@@ -15,6 +15,10 @@ public class Residuos_Generator : MonoBehaviour
     public GameObject Item_prefab4;
     public GameObject Item_prefab5;
     public GameObject Item_prefab6;
+    public GameObject Item_prefab7;
+    public GameObject Item_prefab8;
+    public GameObject Item_prefab9;
+    public GameObject Item_prefab10;
     private int nro_item;
     private int posX;
    
@@ -33,43 +37,58 @@ public class Residuos_Generator : MonoBehaviour
 
     public void SpawnItem()
     {    
-        nro_item = Random.Range(1,7);
+        nro_item = Random.Range(1,11);
+        transform.position = new Vector3 (-1050, 350, 0);
+        
         if (nro_item == 1)
         {
-        transform.position = new Vector3 (-1050, 350, 0);    
         GameObject Item = Instantiate(Item_prefab1, transform.position, transform.rotation) as GameObject;
         Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
         }
         else if (nro_item == 2)
-        {
-        transform.position = new Vector3 (-1050, 350, 0);    
+        {   
         GameObject Item = Instantiate(Item_prefab2, transform.position, transform.rotation) as GameObject;
         Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
         }
         else if (nro_item == 3)
-        {
-        transform.position = new Vector3 (-1050, 350, 0);    
+        {    
         GameObject Item = Instantiate(Item_prefab3, transform.position, transform.rotation) as GameObject;
         Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
         }
         else if (nro_item == 4)
-        {
-        transform.position = new Vector3 (-1050, 350, 0);    
-        GameObject Item = Instantiate(Item_prefab3, transform.position, transform.rotation) as GameObject;
+        {  
+        GameObject Item = Instantiate(Item_prefab4, transform.position, transform.rotation) as GameObject;
         Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
         }
         else if (nro_item == 5)
-        {
-        transform.position = new Vector3 (-1050, 350, 0);    
-        GameObject Item = Instantiate(Item_prefab3, transform.position, transform.rotation) as GameObject;
+        {   
+        GameObject Item = Instantiate(Item_prefab5, transform.position, transform.rotation) as GameObject;
+        Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
+        }
+        else if (nro_item == 6)
+        {    
+        GameObject Item = Instantiate(Item_prefab6, transform.position, transform.rotation) as GameObject;
+        Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
+        }
+        else if (nro_item == 7)
+        {   
+        GameObject Item = Instantiate(Item_prefab7, transform.position, transform.rotation) as GameObject;
+        Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
+        }
+        else if (nro_item == 8)
+        {   
+        GameObject Item = Instantiate(Item_prefab8, transform.position, transform.rotation) as GameObject;
+        Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
+        }
+        else if (nro_item == 9)
+        {   
+        GameObject Item = Instantiate(Item_prefab9, transform.position, transform.rotation) as GameObject;
         Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
         }
         else
-        {
-        transform.position = new Vector3 (-1050, 350, 0);    
-        GameObject Item = Instantiate(Item_prefab4, transform.position, transform.rotation) as GameObject;
+        {    
+        GameObject Item = Instantiate(Item_prefab10, transform.position, transform.rotation) as GameObject;
         Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
-
         }
         
 

@@ -886,11 +886,19 @@ MonoBehaviour:
     type: 3}
   Item_prefab3: {fileID: 167367383873535483, guid: 136ccde2d446b084c85c35738ed9f7e8,
     type: 3}
-  Item_prefab4: {fileID: 2451248963547696298, guid: e680e8add306b0940bbea7888a9e8a9a,
+  Item_prefab4: {fileID: 167367383873535483, guid: 7a20aa03a60c59644a516b8225175bc1,
     type: 3}
-  Item_prefab5: {fileID: 2451248963547696298, guid: 994afdd5fa8006246939d99093495412,
+  Item_prefab5: {fileID: 167367383873535483, guid: c212ed554fd2d0c4891029778294de25,
     type: 3}
-  Item_prefab6: {fileID: 2451248963547696298, guid: 77cc5c986a38f0b4cbba26a5658bb0e7,
+  Item_prefab6: {fileID: 2451248963547696298, guid: e680e8add306b0940bbea7888a9e8a9a,
+    type: 3}
+  Item_prefab7: {fileID: 2451248963547696298, guid: 994afdd5fa8006246939d99093495412,
+    type: 3}
+  Item_prefab8: {fileID: 2451248963547696298, guid: 77cc5c986a38f0b4cbba26a5658bb0e7,
+    type: 3}
+  Item_prefab9: {fileID: 2451248963547696298, guid: 15cdef6c7b7181e488feaf7f1c4ab44a,
+    type: 3}
+  Item_prefab10: {fileID: 2451248963547696298, guid: d3a00fff249ad1544888e946f0f9f801,
     type: 3}
 --- !u!4 &576903185
 Transform:
