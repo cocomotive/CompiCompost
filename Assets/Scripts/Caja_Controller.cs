@@ -10,11 +10,13 @@ public class Caja_Controller : MonoBehaviour
     public GameObject good;
     public GameObject bad;
     public GameObject envio;
+    public GameObject caja_full;
     private GameObject feedback;
-    public int Caja_Capacity = 5;
+    public int Caja_Capacity;
     private UnityEngine.Object explosionRef;
     private Material whiteMat;
     private Material defaultMat;
+    public bool isCompi;
     SpriteRenderer sR;
     Image Ig;
     Animator Anim;
@@ -37,6 +39,14 @@ public class Caja_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       if (!isCompi && Caja_Capacity > 4)
+       {
+          caja_full.SetActive(true);
+       }
+       else
+       {
+          caja_full.SetActive(false);
+       }
           
     }
 
@@ -80,11 +90,11 @@ public class Caja_Controller : MonoBehaviour
     private IEnumerator FeedbackInactive()
      { 
         feedback.SetActive(true);
-        if (Caja_Capacity < 5)
-        {
+        //if (Caja_Capacity < 5)
+        //{
         yield return new WaitForSeconds(0.5f);
         feedback.SetActive(false);
-        }
+        //}
 
      }
 
@@ -104,6 +114,8 @@ public class Caja_Controller : MonoBehaviour
      public void Vaciar()
      {
         if (Caja_Capacity > 4){
+        bad.SetActive(false);
+        good.SetActive(false);
         feedback.SetActive(false);
         envio.SetActive (true);
         Caja_Capacity = 0;
