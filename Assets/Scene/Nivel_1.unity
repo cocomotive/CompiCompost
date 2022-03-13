@@ -901,6 +901,8 @@ MonoBehaviour:
     type: 3}
   Item_prefab10: {fileID: 2451248963547696298, guid: d3a00fff249ad1544888e946f0f9f801,
     type: 3}
+  posX: -1050
+  posY: 350
 --- !u!4 &576903185
 Transform:
   m_ObjectHideFlags: 0

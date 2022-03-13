@@ -20,7 +20,8 @@ public class Residuos_Generator : MonoBehaviour
     public GameObject Item_prefab9;
     public GameObject Item_prefab10;
     private int nro_item;
-    private int posX;
+    public int posX;
+    public int posY;
    
     // Start is called before the first frame update
     void Start()
@@ -38,7 +39,7 @@ public class Residuos_Generator : MonoBehaviour
     public void SpawnItem()
     {    
         nro_item = Random.Range(1,11);
-        transform.position = new Vector3 (-1050, 350, 0);
+        transform.position = new Vector3 (posX, posY, 0);
         
         if (nro_item == 1)
         {
