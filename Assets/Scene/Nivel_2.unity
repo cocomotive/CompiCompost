@@ -452,6 +452,10 @@ MonoBehaviour:
   camion_tipo: R
   good: {fileID: 1800451775}
   bad: {fileID: 1092225181}
+  Game_Controller: {fileID: 0}
+  movement: 0
+  speed: 0
+  originalPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &266653727
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +578,13 @@ MonoBehaviour:
   good: {fileID: 539035098}
   bad: {fileID: 1868725984}
   envio: {fileID: 2128255562}
+  caja_full: {fileID: 0}
   Caja_Capacity: 2
+  isCompi: 0
+  Game_Controller: {fileID: 0}
+  Logro_1: {fileID: 0}
+  Logro_2: {fileID: 0}
+  Error: {fileID: 0}
 --- !u!114 &266653733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -892,6 +902,12 @@ MonoBehaviour:
     type: 3}
   Item_prefab6: {fileID: 2451248963547696298, guid: 77cc5c986a38f0b4cbba26a5658bb0e7,
     type: 3}
+  Item_prefab7: {fileID: 0}
+  Item_prefab8: {fileID: 0}
+  Item_prefab9: {fileID: 0}
+  Item_prefab10: {fileID: 0}
+  posX: 0
+  posY: 0
 --- !u!4 &576903185
 Transform:
   m_ObjectHideFlags: 0
@@ -1128,6 +1144,7 @@ GameObject:
   - component: {fileID: 803025338}
   - component: {fileID: 803025337}
   - component: {fileID: 803025341}
+  - component: {fileID: 803025342}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Canvas
@@ -1239,6 +1256,106 @@ MonoBehaviour:
   Pause: 0
   Instrucciones: {fileID: 894574894}
   scene_name: 
+  Score: 0
+  points: {fileID: 0}
+  nivel: 2
+  Lvl_pass: {fileID: 8300000, guid: 796c3a71ce4fde542b283f4a19d82f77, type: 3}
+--- !u!82 &803025342
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803025336}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &869027041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1896,7 +2013,13 @@ MonoBehaviour:
   good: {fileID: 1647914145}
   bad: {fileID: 643863170}
   envio: {fileID: 0}
+  caja_full: {fileID: 0}
   Caja_Capacity: 5
+  isCompi: 0
+  Game_Controller: {fileID: 0}
+  Logro_1: {fileID: 0}
+  Logro_2: {fileID: 0}
+  Error: {fileID: 0}
 --- !u!1 &1355972111
 GameObject:
   m_ObjectHideFlags: 0
@@ -2016,6 +2139,10 @@ MonoBehaviour:
   camion_tipo: C
   good: {fileID: 443959950}
   bad: {fileID: 1760938217}
+  Game_Controller: {fileID: 0}
+  movement: 0
+  speed: 0
+  originalPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1453386832
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,7 +2265,13 @@ MonoBehaviour:
   good: {fileID: 2092001914}
   bad: {fileID: 121476162}
   envio: {fileID: 607217194}
+  caja_full: {fileID: 0}
   Caja_Capacity: 2
+  isCompi: 0
+  Game_Controller: {fileID: 0}
+  Logro_1: {fileID: 0}
+  Logro_2: {fileID: 0}
+  Error: {fileID: 0}
 --- !u!114 &1453386838
 MonoBehaviour:
   m_ObjectHideFlags: 0

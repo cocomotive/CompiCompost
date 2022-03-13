@@ -22,11 +22,19 @@ public class Caja_Controller : MonoBehaviour
     Animator Anim;
     public GameObject Game_Controller;
 
+    //Para Audio:
+    public AudioClip Logro_1, Logro_2, Error;
+    AudioSource SoundPlayer;
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
       Caja_Capacity = 0;
       Anim = GetComponent<Animator>();
+      SoundPlayer = GetComponent<AudioSource>();
       // Ig = GetComponent<Image>();
       // defaultMat = Ig.material;
       // whiteMat = Resources.Load("whiteFlash", typeof(Material)) as Material;
@@ -58,6 +66,8 @@ public class Caja_Controller : MonoBehaviour
             Debug.Log("Buena");
             Game_Controller.GetComponent<Game_Controller>().AddScore(100);
             feedback = good;
+            SoundPlayer.PlayOneShot(Logro_1);
+
             explosionRef = Resources.Load("Explosion");
             GameObject explosion = (GameObject)Instantiate(explosionRef);
             explosion.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
@@ -67,6 +77,7 @@ public class Caja_Controller : MonoBehaviour
             Debug.Log("Mala");
             Game_Controller.GetComponent<Game_Controller>().AddScore(-100);
             feedback = bad;
+            SoundPlayer.PlayOneShot(Error);
             Anim.Play("Caja_Animation1");
             StartCoroutine(FeedbackInactive());
 

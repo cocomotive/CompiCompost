@@ -9,9 +9,15 @@ public class BTN_Controller : MonoBehaviour
 {
     public string escena;
 
+   //Para Audio:
+    public AudioClip Click;
+    AudioSource SoundPlayer;
+
+
     // Start is called before the first frame update
     void Start()
     {
+      SoundPlayer = GetComponent<AudioSource>();      
         
     }
 
@@ -24,10 +30,12 @@ public class BTN_Controller : MonoBehaviour
     public void CargarNivel()
      {
         if(escena == "Salir"){
+           SoundPlayer.PlayOneShot(Click);
            Application.Quit();
         }
         else
         {
+           SoundPlayer.PlayOneShot(Click);
            SceneManager.LoadScene(escena);
         }
      }

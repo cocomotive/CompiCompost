@@ -8,6 +8,10 @@ public class Residuo_Controller : MonoBehaviour
     public int speed;
     private Rigidbody2D myRB;
 
+    //Para Audio:
+    public AudioClip Click;
+    AudioSource SoundPlayer;
+
 
         void Awake()
     {
@@ -17,6 +21,7 @@ public class Residuo_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SoundPlayer = GetComponent<AudioSource>();
         myRB = GetComponent<Rigidbody2D>();
         //InvokeRepeating("DestroyItem", 2f, 0);
         
@@ -32,6 +37,7 @@ public class Residuo_Controller : MonoBehaviour
 
     public void Caer()
      {
+        SoundPlayer.PlayOneShot(Click);
         myRB.constraints = RigidbodyConstraints2D.FreezePositionX;
         myRB.gravityScale = 60f;
      }

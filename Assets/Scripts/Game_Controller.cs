@@ -11,10 +11,28 @@ public class Game_Controller : MonoBehaviour
     public string scene_name;
     public int Score = 0;
     public Text points;
+    public int nivel;
+
+    //Para Audio:
+    public AudioClip Lvl_pass;
+    AudioSource SoundPlayer;
+
+    void Awake()
+    {
+        SoundPlayer = GetComponent<AudioSource>(); 
+        if (nivel == 2)
+        {
+        SoundPlayer.PlayOneShot(Lvl_pass);
+        }
+        
+
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+               
         //scene_name = SceneManager.GetActiveScene().ToString();
         StartCoroutine(Next_Level());
         Pause = true; 
@@ -41,12 +59,11 @@ public class Game_Controller : MonoBehaviour
     }
 
 
-
     private IEnumerator Next_Level()
      { 
         if (scene_name == "Nivel_1")
         {
-        yield return new WaitForSeconds(120f);
+        yield return new WaitForSeconds(45f);
         SceneManager.LoadScene("Nivel_2");
         }
         
