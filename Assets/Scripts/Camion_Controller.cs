@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Camion_Controller : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Camion_Controller : MonoBehaviour
     public GameObject good;
     public GameObject bad;
     private GameObject feedback;
+    public GameObject Game_Controller;
  
 
 
@@ -28,11 +30,11 @@ public class Camion_Controller : MonoBehaviour
         if (collision.gameObject.tag == "Envio"+camion_tipo)
          {
             Debug.Log("Buen Feedback en el camion!");
+            Game_Controller.GetComponent<Game_Controller>().AddScore();
             feedback = good;
             feedback.SetActive(true);
             //StartCoroutine(FeedbackInactive());
            
-
          } else {
             Debug.Log("Mal Feedback en el camion!");
             feedback = bad;
