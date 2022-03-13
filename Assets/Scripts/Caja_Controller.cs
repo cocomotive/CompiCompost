@@ -18,6 +18,7 @@ public class Caja_Controller : MonoBehaviour
     SpriteRenderer sR;
     Image Ig;
     Animator Anim;
+    public GameObject Game_Controller;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,7 @@ public class Caja_Controller : MonoBehaviour
          {
             Caja_Capacity = Caja_Capacity +1;
             Debug.Log("Buena");
+            Game_Controller.GetComponent<Game_Controller>().AddScore(100);
             feedback = good;
             explosionRef = Resources.Load("Explosion");
             GameObject explosion = (GameObject)Instantiate(explosionRef);
@@ -53,8 +55,10 @@ public class Caja_Controller : MonoBehaviour
 
          } else {
             Debug.Log("Mala");
+            Game_Controller.GetComponent<Game_Controller>().AddScore(-100);
             feedback = bad;
             Anim.Play("Caja_Animation1");
+            StartCoroutine(FeedbackInactive());
 
 
             // Ig.material = whiteMat;
@@ -67,7 +71,7 @@ public class Caja_Controller : MonoBehaviour
             //GameObject explosion = (GameObject)Instantiate(explosionRef);
             //explosion.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
-            //StartCoroutine(FeedbackInactive());
+            
          }
 
     }

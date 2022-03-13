@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -52,11 +52,19 @@ public class Game_Controller : MonoBehaviour
         
      }
 
-     public void AddScore()
+     public void AddScore(int puntaje)
      {
-        Score = Score +1000 ;
-        points.text = "Score: "+Score.ToString();
-
+         Score = Score +puntaje;
+         if (Score < 1)
+         {
+            Score = 0;
+            points.text = "Score: 0000";
+         }
+         else
+         {
+            points.text = "Score: "+Score.ToString();
+         }
+        
      }
 
 

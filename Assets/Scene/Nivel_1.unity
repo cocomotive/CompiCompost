@@ -578,6 +578,7 @@ MonoBehaviour:
   bad: {fileID: 1868725984}
   envio: {fileID: 2128255562}
   Caja_Capacity: 2
+  Game_Controller: {fileID: 803025336}
 --- !u!114 &266653733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1983,6 +1984,7 @@ MonoBehaviour:
   bad: {fileID: 643863170}
   envio: {fileID: 0}
   Caja_Capacity: 5
+  Game_Controller: {fileID: 803025336}
 --- !u!212 &1340719315
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2296,6 +2298,7 @@ MonoBehaviour:
   bad: {fileID: 121476162}
   envio: {fileID: 607217194}
   Caja_Capacity: 2
+  Game_Controller: {fileID: 803025336}
 --- !u!114 &1453386838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2679,7 +2682,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score:'
+  m_Text: 'Score: 0000'
 --- !u!222 &1752952171
 CanvasRenderer:
   m_ObjectHideFlags: 0
