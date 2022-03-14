@@ -41,8 +41,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -764.5, y: 536.1}
-  m_SizeDelta: {x: 49, y: 66}
+  m_AnchoredPosition: {x: -745.85, y: 524.27}
+  m_SizeDelta: {x: 149.23, y: 84.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &37048077444936881
 CanvasRenderer:
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 79e49bd87c754fd4591fdee14a78ae06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3ec3cbe886284241940aa6bf2b5c902, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -93,7 +93,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1159668, y: -0.27182007}
+  m_Offset: {x: 0.62164307, y: -6.084606}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -104,7 +104,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 44.917786, y: 65.023254}
+  m_Size: {x: 154.10022, y: 76.64883}
   m_EdgeRadius: 0
 --- !u!50 &7900771647226004579
 Rigidbody2D:
@@ -198,6 +198,7 @@ MonoBehaviour:
   Click: {fileID: 8300000, guid: dc9f0bd6439e5894388e5a3f68d4b2a8, type: 3}
   Feedback_malo: {fileID: 7367051614827534219, guid: 67f2c9df58210c44585a3d06dbe727c2,
     type: 3}
+  Timer: {fileID: 0}
 --- !u!82 &3532983242300144064
 AudioSource:
   m_ObjectHideFlags: 0

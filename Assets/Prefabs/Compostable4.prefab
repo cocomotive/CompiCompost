@@ -149,7 +149,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 019e99efff14886499a14c44b6c7193f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb7cacedb0f771d409dd2e3ced0d686e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -277,6 +277,7 @@ MonoBehaviour:
   Click: {fileID: 8300000, guid: dc9f0bd6439e5894388e5a3f68d4b2a8, type: 3}
   Feedback_malo: {fileID: 7367051614827534219, guid: 67f2c9df58210c44585a3d06dbe727c2,
     type: 3}
+  Timer: {fileID: 0}
 --- !u!82 &1213573480708334564
 AudioSource:
   m_ObjectHideFlags: 0

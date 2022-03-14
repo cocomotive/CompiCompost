@@ -41,8 +41,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -764.5, y: 566}
-  m_SizeDelta: {x: 49, y: 66}
+  m_AnchoredPosition: {x: -754.97, y: 573.94}
+  m_SizeDelta: {x: 119.74, y: 88.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &37048077444936881
 CanvasRenderer:
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 79e49bd87c754fd4591fdee14a78ae06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1979022d94ce6ba479627dd4f8640b93, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -198,6 +198,7 @@ MonoBehaviour:
   Click: {fileID: 8300000, guid: dc9f0bd6439e5894388e5a3f68d4b2a8, type: 3}
   Feedback_malo: {fileID: 7367051614827534219, guid: 67f2c9df58210c44585a3d06dbe727c2,
     type: 3}
+  Timer: {fileID: 0}
 --- !u!82 &8818825652562497234
 AudioSource:
   m_ObjectHideFlags: 0
