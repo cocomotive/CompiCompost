@@ -12,6 +12,8 @@ public class Residuo_Controller : MonoBehaviour
     public AudioClip Click;
     AudioSource SoundPlayer;
     public GameObject Feedback_malo;
+    public GameObject Timer;
+
 
 
         void Awake()
@@ -22,6 +24,7 @@ public class Residuo_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Timer = GameObject.FindGameObjectWithTag ("Canvas");
         SoundPlayer = GetComponent<AudioSource>();
         myRB = GetComponent<Rigidbody2D>();
         //InvokeRepeating("DestroyItem", 2f, 0);
@@ -55,10 +58,12 @@ public class Residuo_Controller : MonoBehaviour
          }
          else
          {
+            Timer.GetComponent<Timer>().AddTime(-10);
             transform.position = new Vector3 (0, 0, 0);
             GameObject Item = Instantiate(Feedback_malo, transform.position, transform.rotation) as GameObject;
-            Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
+            Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas_2").transform, false);
             Destroy(gameObject);
+            
          }
 
     }

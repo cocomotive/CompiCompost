@@ -21,6 +21,7 @@ public class Caja_Controller : MonoBehaviour
     Image Ig;
     Animator Anim;
     public GameObject Game_Controller;
+    public GameObject Timer;
 
     //Para Audio:
     public AudioClip Logro_1, Logro_2, Error;
@@ -65,6 +66,7 @@ public class Caja_Controller : MonoBehaviour
             Game_Controller.GetComponent<Game_Controller>().AddScore(100);
             feedback = good;
             SoundPlayer.PlayOneShot(Logro_1);
+            Timer.GetComponent<Timer>().AddTime(10);
 
             explosionRef = Resources.Load("Explosion");
             GameObject explosion = (GameObject)Instantiate(explosionRef);
@@ -76,6 +78,7 @@ public class Caja_Controller : MonoBehaviour
             Game_Controller.GetComponent<Game_Controller>().AddScore(-100);
             feedback = bad;
             SoundPlayer.PlayOneShot(Error);
+            Timer.GetComponent<Timer>().AddTime(-5);
             Anim.Play("Caja_Animation1");
             StartCoroutine(FeedbackInactive());
 

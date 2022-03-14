@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a07daedf8db72f442971242c29186b4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 15
+  timer: 60
   currentTimer: 0
   timeUI: {fileID: 521204425}
 --- !u!114 &206372175
@@ -539,7 +539,7 @@ MonoBehaviour:
   Score: 0
   points: {fileID: 1497725313}
   nivel: 0
-  reloj: {fileID: 521204423}
+  reloj: {fileID: 0}
   Lvl_pass: {fileID: 0}
 --- !u!1 &220174527
 GameObject:
@@ -837,7 +837,7 @@ GameObject:
   - component: {fileID: 345414926}
   m_Layer: 5
   m_Name: Canvas_2
-  m_TagString: Untagged
+  m_TagString: Canvas_2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1404,6 +1404,7 @@ MonoBehaviour:
   Caja_Capacity: 0
   isCompi: 0
   Game_Controller: {fileID: 206372169}
+  Timer: {fileID: 206372169}
   Logro_1: {fileID: 8300000, guid: d49515e419e7ac94a976846a09ad6924, type: 3}
   Logro_2: {fileID: 8300000, guid: f0d742f62c014a943811013a9052ba95, type: 3}
   Error: {fileID: 8300000, guid: 23f0808490ffe0f4f9c65acff863ef55, type: 3}
@@ -2872,6 +2873,7 @@ MonoBehaviour:
   Caja_Capacity: 5
   isCompi: 1
   Game_Controller: {fileID: 206372169}
+  Timer: {fileID: 206372169}
   Logro_1: {fileID: 8300000, guid: d49515e419e7ac94a976846a09ad6924, type: 3}
   Logro_2: {fileID: 8300000, guid: f0d742f62c014a943811013a9052ba95, type: 3}
   Error: {fileID: 8300000, guid: 23f0808490ffe0f4f9c65acff863ef55, type: 3}
@@ -3371,6 +3373,7 @@ MonoBehaviour:
   Caja_Capacity: 5
   isCompi: 0
   Game_Controller: {fileID: 206372169}
+  Timer: {fileID: 206372169}
   Logro_1: {fileID: 8300000, guid: d49515e419e7ac94a976846a09ad6924, type: 3}
   Logro_2: {fileID: 8300000, guid: f0d742f62c014a943811013a9052ba95, type: 3}
   Error: {fileID: 8300000, guid: 23f0808490ffe0f4f9c65acff863ef55, type: 3}
@@ -3896,6 +3899,11 @@ PrefabInstance:
       propertyPath: Logro_2
       value: 
       objectReference: {fileID: 8300000, guid: f0d742f62c014a943811013a9052ba95, type: 3}
+    - target: {fileID: 2744649940247069051, guid: e4ac9e604f627804584559207067fbed,
+        type: 3}
+      propertyPath: Timer
+      value: 
+      objectReference: {fileID: 206372169}
     - target: {fileID: 2744649940247069054, guid: e4ac9e604f627804584559207067fbed,
         type: 3}
       propertyPath: m_Name
@@ -4211,6 +4219,11 @@ PrefabInstance:
       propertyPath: Logro_2
       value: 
       objectReference: {fileID: 8300000, guid: f0d742f62c014a943811013a9052ba95, type: 3}
+    - target: {fileID: 5969688213061746965, guid: b1acee53738daee42858cd937ed30d87,
+        type: 3}
+      propertyPath: Timer
+      value: 
+      objectReference: {fileID: 206372169}
     - target: {fileID: 5969688214931714731, guid: b1acee53738daee42858cd937ed30d87,
         type: 3}
       propertyPath: m_AnchoredPosition.x

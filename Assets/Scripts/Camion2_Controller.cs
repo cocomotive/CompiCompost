@@ -21,6 +21,7 @@ public class Camion2_Controller : MonoBehaviour
     //Para Audio:
     public AudioClip Logro_1, Logro_2, Error;
     AudioSource SoundPlayer;
+    public GameObject Timer;
 
 
 
@@ -58,6 +59,7 @@ public class Camion2_Controller : MonoBehaviour
             feedback = good;
             feedback.SetActive(true);
             SoundPlayer.PlayOneShot(Logro_1);
+            Timer.GetComponent<Timer>().AddTime(10);
 
             explosionRef = Resources.Load("Explosion");
             GameObject explosion = (GameObject)Instantiate(explosionRef);

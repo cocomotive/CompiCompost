@@ -15,6 +15,7 @@ public class Camion_Controller : MonoBehaviour
     private Rigidbody2D myRB;
     public int speed;
     public Vector3 originalPosition;
+    public GameObject Timer;
 
     //Para Audio:
     public AudioClip Logro_1, Logro_2, Error;
@@ -61,6 +62,7 @@ public class Camion_Controller : MonoBehaviour
             feedback = good;
             feedback.SetActive(true);
             SoundPlayer.PlayOneShot(Logro_1);
+            Timer.GetComponent<Timer>().AddTime(10);
             
 
             explosionRef = Resources.Load("Explosion");

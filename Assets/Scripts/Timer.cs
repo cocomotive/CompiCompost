@@ -37,4 +37,18 @@ public class Timer : MonoBehaviour
             }
         }
     }
+
+
+    public void AddTime(int mastiempo)
+     {
+         currentTimer = currentTimer + mastiempo;
+         if (currentTimer > 60)
+         {
+             currentTimer = 60;
+
+         }  
+     }
+
+
+
 }

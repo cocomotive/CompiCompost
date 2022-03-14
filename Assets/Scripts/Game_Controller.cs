@@ -66,7 +66,7 @@ public class Game_Controller : MonoBehaviour
      { 
         if (scene_name == "Nivel_1")
         {
-        yield return new WaitForSeconds(120f);
+        yield return new WaitForSeconds(60f);
         SceneManager.LoadScene("Nivel_2");
         }
         
