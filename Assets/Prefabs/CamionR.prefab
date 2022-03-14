@@ -41,7 +41,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 536, y: -377}
-  m_SizeDelta: {x: 823, y: 720}
+  m_SizeDelta: {x: 391, y: 239}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2588243659171585879
 CanvasRenderer:
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 57392c01fd339a04c913d0c6acc202a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 036d93e6ea2d09243afbd81e49307683, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -124,6 +124,9 @@ MonoBehaviour:
   movement: 0
   speed: 350
   originalPosition: {x: 0, y: 0, z: 0}
+  Logro_1: {fileID: 0}
+  Logro_2: {fileID: 0}
+  Error: {fileID: 0}
 --- !u!50 &2588243659171585866
 Rigidbody2D:
   serializedVersion: 4
