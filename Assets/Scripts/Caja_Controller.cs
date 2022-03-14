@@ -28,7 +28,6 @@ public class Caja_Controller : MonoBehaviour
 
 
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +38,6 @@ public class Caja_Controller : MonoBehaviour
       // defaultMat = Ig.material;
       // whiteMat = Resources.Load("whiteFlash", typeof(Material)) as Material;
       
-
       
        //explosionRef = Resources.Load("Explosion");
     }

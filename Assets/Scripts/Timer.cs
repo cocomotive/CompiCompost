@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -21,10 +22,10 @@ public class Timer : MonoBehaviour
     {
         if (currentTimer <= 0)
         {
+            SceneManager.LoadScene("Scene_Derrota");
             Debug.Log("Perdiste, te quedaste sin tiempo gil");
             currentTimer = 0;
             
-
         }
         else
         {

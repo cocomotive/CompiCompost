@@ -12,6 +12,7 @@ public class Game_Controller : MonoBehaviour
     public int Score = 0;
     public Text points;
     public int nivel;
+    public Image reloj;
 
     //Para Audio:
     public AudioClip Lvl_pass;
@@ -40,6 +41,8 @@ public class Game_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
     if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
     {
     Pause = !Pause;
@@ -85,6 +88,7 @@ public class Game_Controller : MonoBehaviour
 
      public void AddScore(int puntaje)
      {
+         //reloj.fillAmount = 1;
          Score = Score +puntaje;
          if (Score < 1)
          {

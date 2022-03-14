@@ -11,6 +11,7 @@ public class Residuo_Controller : MonoBehaviour
     //Para Audio:
     public AudioClip Click;
     AudioSource SoundPlayer;
+    public GameObject Feedback_malo;
 
 
         void Awake()
@@ -47,6 +48,17 @@ public class Residuo_Controller : MonoBehaviour
         if (collision.gameObject.tag == "Caja1" || collision.gameObject.tag == "Caja2" || collision.gameObject.tag == "Caja3" )
          {
              Destroy(gameObject);
+         }
+         else if (collision.gameObject.tag == "Collider_Para_Compi")
+         {
+            myRB.gravityScale = 60f;
+         }
+         else
+         {
+            transform.position = new Vector3 (0, 0, 0);
+            GameObject Item = Instantiate(Feedback_malo, transform.position, transform.rotation) as GameObject;
+            Item.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
+            Destroy(gameObject);
          }
 
     }

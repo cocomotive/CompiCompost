@@ -17,6 +17,7 @@ TagManager:
   - CamionC
   - CamionR
   - Collider_Camiones
+  - Collider_Para_Compi
   layers:
   - Default
   - TransparentFX
