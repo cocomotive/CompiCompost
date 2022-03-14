@@ -16,6 +16,7 @@ TagManager:
   - EnvioC
   - CamionC
   - CamionR
+  - Collider_Camiones
   layers:
   - Default
   - TransparentFX

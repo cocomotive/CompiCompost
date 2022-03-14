@@ -69,6 +69,20 @@ public class Game_Controller : MonoBehaviour
         
      }
 
+
+
+     private void Derrota()
+     { 
+        SceneManager.LoadScene("Scene_Derrota");
+     }
+
+        private void Victoria()
+     { 
+        SceneManager.LoadScene("Scene_Victoria");
+     }
+
+
+
      public void AddScore(int puntaje)
      {
          Score = Score +puntaje;

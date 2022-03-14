@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/Scene_ScoresTable.unity
     guid: 85280bdbe314e874cbd6ac3b422b8d2c
+  - enabled: 1
+    path: Assets/Scene/Scene_Derrota.unity
+    guid: 9dbabfd1e0514d446b00aeabf2767822
+  - enabled: 1
+    path: Assets/Scene/Scene_Victoria.unity
+    guid: 5c5d2764b22c4db4d93d89fe79123f91
   m_configObjects: {}
