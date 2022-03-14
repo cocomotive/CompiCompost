@@ -21,6 +21,7 @@ public class Caja_Controller : MonoBehaviour
     Image Ig;
     Animator Anim;
     public GameObject Game_Controller;
+    public GameObject GameManager;
     public GameObject Timer;
 
     //Para Audio:
@@ -32,6 +33,7 @@ public class Caja_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      //GameManager = GameObject.FindGameObjectsWithTag("GameManager");
       Caja_Capacity = 0;
       Anim = GetComponent<Animator>();
       SoundPlayer = GetComponent<AudioSource>();
@@ -63,10 +65,14 @@ public class Caja_Controller : MonoBehaviour
          {
             Caja_Capacity = Caja_Capacity +1;
             Debug.Log("Buena");
-            Game_Controller.GetComponent<Game_Controller>().AddScore(100);
+             Game_Controller.GetComponent<Game_Controller>().AddScore(100);
+            //GameManager.GetComponent<GameManager>().AddScore(100);
             feedback = good;
             SoundPlayer.PlayOneShot(Logro_1);
-            Timer.GetComponent<Timer>().AddTime(10);
+            if (isCompi == true)
+            {
+               Timer.GetComponent<Timer>().AddTime(10);
+            }
 
             explosionRef = Resources.Load("Explosion");
             GameObject explosion = (GameObject)Instantiate(explosionRef);
@@ -76,6 +82,7 @@ public class Caja_Controller : MonoBehaviour
          } else {
             Debug.Log("Mala");
             Game_Controller.GetComponent<Game_Controller>().AddScore(-100);
+            //GameManager.GetComponent<GameManager>().AddScore(-100);
             feedback = bad;
             SoundPlayer.PlayOneShot(Error);
             Timer.GetComponent<Timer>().AddTime(-5);

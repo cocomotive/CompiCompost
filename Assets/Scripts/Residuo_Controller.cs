@@ -5,7 +5,7 @@ using UnityEngine;
 public class Residuo_Controller : MonoBehaviour
 {
     public string tipo_item;
-    public int speed;
+    public float speed;
     private Rigidbody2D myRB;
 
     //Para Audio:
@@ -13,6 +13,8 @@ public class Residuo_Controller : MonoBehaviour
     AudioSource SoundPlayer;
     public GameObject Feedback_malo;
     public GameObject Timer;
+    public GameObject Residuos_Generator;
+
 
 
 
@@ -27,6 +29,7 @@ public class Residuo_Controller : MonoBehaviour
         Timer = GameObject.FindGameObjectWithTag ("Canvas");
         SoundPlayer = GetComponent<AudioSource>();
         myRB = GetComponent<Rigidbody2D>();
+        //Residuos_Generator = GameObject.FindGameObjectWithTag ("Residuos_Generator");
         //InvokeRepeating("DestroyItem", 2f, 0);
         
     }
@@ -34,8 +37,15 @@ public class Residuo_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        myRB.velocity = new Vector2(speed, myRB.velocity.y);
-        
+
+         myRB.velocity = new Vector2(speed, myRB.velocity.y);
+  /*        if (Residuos_Generator.GetComponent<Residuos_Generator>().items_pasando > 3 && Residuos_Generator.GetComponent<Residuos_Generator>().items_pasando < 6 )
+         {
+             speed = 250;
+         } else if(Residuos_Generator.GetComponent<Residuos_Generator>().items_pasando > 6)
+         {
+            speed = 400;
+         } */   
     }
 
 

@@ -9,24 +9,28 @@ public class Game_Controller : MonoBehaviour
     public bool Pause;
     public GameObject Instrucciones;
     public string scene_name;
-    public int Score = 0;
+    public int Score;
     public Text points;
     public int nivel;
     public Image reloj;
+    //public GameObject Residuos_Generator;
+    public GameObject GameManager;
+
 
     //Para Audio:
     public AudioClip Lvl_pass;
     AudioSource SoundPlayer;
 
+
     void Awake()
     {
+
         SoundPlayer = GetComponent<AudioSource>(); 
         if (nivel == 2)
         {
         SoundPlayer.PlayOneShot(Lvl_pass);
         }
         
-
     }
 
 
@@ -41,6 +45,15 @@ public class Game_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        // if (Residuos_Generator.GetComponent<Residuos_Generator>().items_pasando > 3 && Residuos_Generator.GetComponent<Residuos_Generator>().items_pasando < 6)
+        // {  
+
+        // } 
+        // else if (Residuos_Generator.GetComponent<Residuos_Generator>().items_pasando > 6)
+        // {
+
+        // }
 
 
     if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
@@ -66,8 +79,14 @@ public class Game_Controller : MonoBehaviour
      { 
         if (scene_name == "Nivel_1")
         {
-        yield return new WaitForSeconds(60f);
+        yield return new WaitForSeconds(20f);
         SceneManager.LoadScene("Nivel_2");
+        }
+
+        if (scene_name == "Nivel_2")
+        {
+        yield return new WaitForSeconds(40f);
+        SceneManager.LoadScene("Scene_Victoria");
         }
         
      }
@@ -89,18 +108,20 @@ public class Game_Controller : MonoBehaviour
      public void AddScore(int puntaje)
      {
          //reloj.fillAmount = 1;
-         Score = Score +puntaje;
-         if (Score < 1)
+         GameManager.GetComponent<GameManager>().Score = GameManager.GetComponent<GameManager>().Score + puntaje;
+         if (GameManager.GetComponent<GameManager>().Score <= 0)
          {
-            Score = 0;
+            GameManager.GetComponent<GameManager>().Score = 0;
             points.text = "000000";
          }
          else
          {
-            points.text = Score.ToString();
-         }
+            points.text = GameManager.GetComponent<GameManager>().Score.ToString();
+         } 
         
      }
+
+
 
 
 

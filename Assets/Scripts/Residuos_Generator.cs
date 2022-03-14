@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,22 +22,39 @@ public class Residuos_Generator : MonoBehaviour
     private int nro_item;
     public int posX;
     public int posY;
+    public int items_pasando;
+
    
     // Start is called before the first frame update
     void Start()
     {
         //transform.position = new Vector3 (posX, 150, 0);
-        InvokeRepeating("SpawnItem", startAt, repeatIn);   
+        InvokeRepeating("SpawnItem", startAt, repeatIn); 
+
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {  
 
     }
 
+
     public void SpawnItem()
-    {    
+    {   
+        items_pasando = items_pasando +1;
+        
+         if (items_pasando > 3 && items_pasando < 5)
+        {
+
+            //CancelInvoke("SpawnItem");
+            //repeatIn = repeatIn -1.5f;
+        } else if (items_pasando > 6 && items_pasando < 8)
+        {
+            //repeatIn = repeatIn -1.5f;
+
+        } 
+
         nro_item = Random.Range(1,11);
         transform.position = new Vector3 (posX, posY, 0);
         

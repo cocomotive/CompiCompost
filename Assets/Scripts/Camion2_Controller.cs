@@ -11,6 +11,7 @@ public class Camion2_Controller : MonoBehaviour
     public GameObject bad;
     private GameObject feedback;
     public GameObject Game_Controller;
+    public GameObject GameManager;
     private UnityEngine.Object explosionRef;
     public bool movement;
     private Rigidbody2D myRB;
@@ -55,11 +56,10 @@ public class Camion2_Controller : MonoBehaviour
         if (collision.gameObject.tag == "Envio"+camion_tipo)
          {
             Debug.Log("Buen Feedback en el camion!");
-            Game_Controller.GetComponent<Game_Controller>().AddScore(1000);
+            GameManager.GetComponent<GameManager>().AddScore(1000);
             feedback = good;
             feedback.SetActive(true);
             SoundPlayer.PlayOneShot(Logro_1);
-            Timer.GetComponent<Timer>().AddTime(10);
 
             explosionRef = Resources.Load("Explosion");
             GameObject explosion = (GameObject)Instantiate(explosionRef);

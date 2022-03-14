@@ -19,6 +19,8 @@ TagManager:
   - Collider_Camiones
   - Collider_Para_Compi
   - Canvas_2
+  - Residuos_Generator
+  - GameManager
   layers:
   - Default
   - TransparentFX
