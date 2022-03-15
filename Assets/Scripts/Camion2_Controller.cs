@@ -56,7 +56,8 @@ public class Camion2_Controller : MonoBehaviour
         if (collision.gameObject.tag == "Envio"+camion_tipo)
          {
             Debug.Log("Buen Feedback en el camion!");
-            GameManager.GetComponent<GameManager>().AddScore(1000);
+            Game_Controller.GetComponent<Game_Controller>().AddScore(1000);
+            //GameManager.GetComponent<GameManager>().AddScore(1000);
             feedback = good;
             feedback.SetActive(true);
             SoundPlayer.PlayOneShot(Logro_1);

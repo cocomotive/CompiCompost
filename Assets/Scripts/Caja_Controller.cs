@@ -88,7 +88,7 @@ public class Caja_Controller : MonoBehaviour
             Timer.GetComponent<Timer>().AddTime(-5);
             Anim.Play("Caja_Animation1");
             StartCoroutine(FeedbackInactive());
-
+           
 
             // Ig.material = whiteMat;
             // if (Ig.material = whiteMat)

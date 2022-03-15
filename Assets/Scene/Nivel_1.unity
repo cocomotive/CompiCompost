@@ -792,7 +792,6 @@ MonoBehaviour:
   points: {fileID: 1752952170}
   nivel: 1
   reloj: {fileID: 0}
-  GameManager: {fileID: 1505659685}
   Lvl_pass: {fileID: 8300000, guid: 796c3a71ce4fde542b283f4a19d82f77, type: 3}
 --- !u!82 &803025342
 AudioSource:
@@ -1033,7 +1032,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 968a6a5cc1fd13244bb73dd2c1f79b27, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b55b76df3e3083f409b8738af4d329cf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1755,53 +1754,6 @@ Transform:
   m_Father: {fileID: 803025340}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1505659685
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1505659686}
-  - component: {fileID: 1505659687}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: GameManager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1505659686
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505659685}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 495.6839, y: 179.42973, z: -1561.25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1505659687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505659685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 779302e4b4359a3488277d5e89b9ae11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Score: 0
-  lifeScore: 0
-  points: {fileID: 1752952170}
-  playerDeadGameRestart: 0
 --- !u!1 &1643425780
 GameObject:
   m_ObjectHideFlags: 0
@@ -2052,7 +2004,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.05
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2216,7 +2168,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 000000
+  m_Text: '0
+
+'
 --- !u!222 &1752952171
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2411,7 +2365,7 @@ PrefabInstance:
         type: 3}
       propertyPath: GameManager
       value: 
-      objectReference: {fileID: 1505659685}
+      objectReference: {fileID: 0}
     - target: {fileID: 2588243659171585878, guid: 4d08beaeb6da1de4a947a6eee5a68183,
         type: 3}
       propertyPath: m_Sprite
@@ -2573,7 +2527,7 @@ PrefabInstance:
         type: 3}
       propertyPath: GameManager
       value: 
-      objectReference: {fileID: 1505659685}
+      objectReference: {fileID: 0}
     - target: {fileID: 4728823847113514644, guid: 5fabbcc371cc85d498008584a7e5cfc1,
         type: 3}
       propertyPath: m_Offset.x
@@ -2869,7 +2823,7 @@ PrefabInstance:
         type: 3}
       propertyPath: GameManager
       value: 
-      objectReference: {fileID: 1505659685}
+      objectReference: {fileID: 0}
     - target: {fileID: 5932019011998668534, guid: 9031e3b9f5d95594a91631da04e790bd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3059,7 +3013,7 @@ PrefabInstance:
         type: 3}
       propertyPath: GameManager
       value: 
-      objectReference: {fileID: 1505659685}
+      objectReference: {fileID: 0}
     - target: {fileID: 6877139472528756401, guid: ae3906586bdd19945b450b5c8f62bdf3,
         type: 3}
       propertyPath: m_RootOrder

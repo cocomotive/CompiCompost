@@ -14,7 +14,6 @@ public class Game_Controller : MonoBehaviour
     public int nivel;
     public Image reloj;
     //public GameObject Residuos_Generator;
-    public GameObject GameManager;
 
 
     //Para Audio:
@@ -55,7 +54,8 @@ public class Game_Controller : MonoBehaviour
 
         // }
 
-
+        points.text = GameManager.instance.Score.ToString();
+        
     if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
     {
     Pause = !Pause;
@@ -79,15 +79,15 @@ public class Game_Controller : MonoBehaviour
      { 
         if (scene_name == "Nivel_1")
         {
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(60f);
         SceneManager.LoadScene("Nivel_2");
         }
 
-        if (scene_name == "Nivel_2")
+        /* if (scene_name == "Nivel_2")
         {
         yield return new WaitForSeconds(40f);
         SceneManager.LoadScene("Scene_Victoria");
-        }
+        } */
         
      }
 
@@ -95,12 +95,12 @@ public class Game_Controller : MonoBehaviour
 
      private void Derrota()
      { 
-        SceneManager.LoadScene("Scene_Derrota");
+        SceneManager.LoadScene("Scene_Final");
      }
 
         private void Victoria()
      { 
-        SceneManager.LoadScene("Scene_Victoria");
+        SceneManager.LoadScene("Scene_Final");
      }
 
 
@@ -108,16 +108,28 @@ public class Game_Controller : MonoBehaviour
      public void AddScore(int puntaje)
      {
          //reloj.fillAmount = 1;
-         GameManager.GetComponent<GameManager>().Score = GameManager.GetComponent<GameManager>().Score + puntaje;
-         if (GameManager.GetComponent<GameManager>().Score <= 0)
-         {
-            GameManager.GetComponent<GameManager>().Score = 0;
-            points.text = "000000";
-         }
-         else
-         {
-            points.text = GameManager.GetComponent<GameManager>().Score.ToString();
-         } 
+        //GameManager.GetComponent<GameManager>().Score = GameManager.GetComponent<GameManager>().Score + puntaje;        
+        //if (GameManager.GetComponent<GameManager>().Score <= 0)
+        //{
+        //   GameManager.GetComponent<GameManager>().Score = 0;
+        //   points.text = "000000";
+        //}
+        //else
+        //{
+        //   points.text = GameManager.GetComponent<GameManager>().Score.ToString();
+        //} 
+
+        GameManager.instance.Score = GameManager.instance.Score + puntaje;
+        if(GameManager.instance.Score <= 0)
+        {
+            GameManager.instance.Score = 0;
+            points.text = "0";
+        }
+
+        //else
+        //{
+        //    points.text = GameManager.instance.Score.ToString();
+        //}
         
      }
 

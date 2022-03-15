@@ -22,8 +22,8 @@ public class Timer : MonoBehaviour
     {
         if (currentTimer <= 0)
         {
-            SceneManager.LoadScene("Scene_Derrota");
-            Debug.Log("Perdiste, te quedaste sin tiempo gil");
+            SceneManager.LoadScene("Scene_Final");
+            //Debug.Log("Perdiste, te quedaste sin tiempo gil");
             currentTimer = 0;
             
         }

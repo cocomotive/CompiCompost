@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    
+
     public int Score = 0;
     public int lifeScore;
     public Text points;
@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-    
+        //instance = this;
         MakeSingleton();
     }
 
